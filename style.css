@@ -1,0 +1,79 @@
+body {
+    /*background-image: url("./bg.jpg");*/
+    width:100%;
+    height:auto;
+    background-color: black !important;
+}
+.centered{
+    float:left;
+    background: url("./amp.jpg")no-repeat center center;
+    background-size:contain;
+    position:absolute;
+    width:750px;
+    height:600px;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius:40px;
+    box-shadow: 2px 2px 2px grey;
+}
+
+.topnav{
+    
+    width:100%;
+    height:auto;
+display:block;
+height:10%;
+
+padding:30px;
+margin-left:15px;
+}
+
+.navbar-nav li{
+float:left;
+margin:0 10px;
+}
+.video_player {
+display:block;
+
+height:90%;
+width:auto;
+}
+
+iframe{
+    border:none;
+    border-radius: 15px;
+}
+.player_frame{
+  display:block;
+
+  width:91%;
+  height:87%;
+  margin:auto;
+  margin-top:15px;
+  padding:0px;
+    
+    border:0 none;
+    overflow:hidden;
+}
+#dialog{
+    display:none;
+}
+ .glyphicon-info-sign{
+ color:white;
+ }
+ .glyphicon-info-sign:hover{
+ opacity:0.5;
+ cursor:pointer;
+ }
+ .modal-body a{
+    font-weight: bold;
+    color: black;
+ }
+ .modal-body a:hover{
+    color: grey;
+ }
+
+

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="./logo.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/css/bootstrap-select.min.css">
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js"></script>
+    <script src="./js.js"></script>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-97386530-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+    <title>Blues Jamtrack Generator</title>
+</head>
+
+<body>
+    <div class="centered">
+        <div class="topnav">
+            <ul class="nav navbar-nav">
+                <li>
+                    <select class="selectpicker" id="key_select"  data-width="80px" data-size="false">
+                        <option id="keyOption" style="display:none;">Key</option>
+                        <option>E</option>
+                        <option>F</option>
+                        <option>F#</option>
+                        <option>G</option>
+                        <option>G#</option>
+                        <option>A</option>
+                        <option>A#</option>
+                        <option>B</option>
+                        <option>C</option>
+                        <option>C#</option>
+                        <option>D</option>
+                        <option>D#</option>
+                    </select>
+                </li>
+                <li>
+                    <div class="btn-group" data-toggle="buttons">
+                        <label class="btn btn-default active">
+                            <input type="radio" name="options" id="major_select" autocomplete="off" checked> Major
+                        </label>
+                        <label class="btn btn-default">
+                            <input type="radio" name="options" id="minor_select" autocomplete="off"> Minor
+                        </label>
+                    </div>
+                </li>
+                <li>
+                    <select class="selectpicker" id="tempo_select" data-width="100px" data-size="false">
+                        <option style="display:none;">Tempo</option>
+                        <option>Fast</option>
+                        <option>Medium</option>
+                        <option>Slow</option>
+                    </select>
+
+                </li>
+                <li>
+                    <button type="button" id="jam_start" class="btn btn-default">Start Jamming!</button>
+                </li>
+                <li>
+                    <button type="button" id="random_start" class="btn btn-default">Random jamtrack!</button>
+                    <span id="aboutButton" class="glyphicon glyphicon-info-sign"></span>
+                </li>   
+            </ul>
+            
+        </div>
+        <div class="video_player">
+            <div class="player_frame">
+            </div>
+        </div>
+    </div>
+
+    <div id="noFindTrackModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <p>Couldn't find a track based on your criteria. Randomizing another track in selected key</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="noKeyModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <p>Please select key!</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="noTempoModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <p>Please select tempo!</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="aboutModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4>Blues Jamtrack Generator v1.0</h4>
+         <div class="modal-body">        
+        <p>Select key, mode and tempo and the generator will find a jamtrack based on your criteria.</p>
+        <p>All the jamtracks are generated from a collection of youtube-links.</p>
+        <p>If no track is found, a random track in the same key will be generated.</p>
+        <p>If you feel wild and crazy, click the random button for a completely random track.</p>
+        <p>If you're the owner of a track and want it removed from the site, or if you have any questions or suggestions, my email is <a href="mailto:h15nicti@du.se">h15nicti@du.se</a>.</p>
+        <p>Made by Nicklas Tirus, 2017</p>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</html>
